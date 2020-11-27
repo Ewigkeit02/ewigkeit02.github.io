@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>Result</title>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src='js/scroll.js' type='text/javascript'></script>
 	<meta charset="UTF-8">
@@ -29,7 +30,50 @@
 	</br>
 	
 	<div style="text-align:center;"><h1><font color="blue">RESULT</font></h1></div>
-	<div class="body-map"></div>
+	<div class="body-map">
+		<style>
+		#map{
+			width: 300px
+		}
+		img.pop{
+			width:200px;
+		}
+		#image{
+			border-color: black;
+			border: solid;
+			border-width: 1px;
+			position: absolute;
+			display: none;
+		}
+	</style>
+
+	<script>
+		function displayImg() {
+			var img = document.getElementById("image");
+
+			var x = event.clientX + document.body.scrollLeft + 20;
+			var y = event.clientY + document.body.scrollTop - 5; 
+
+			img.style.left = x + "px";
+			img.style.top = y + "px";
+			img.style.display = "block";
+		}
+		function vanishImg(){
+			var img = document.getElementById("image");
+			img.style.display = "none";
+		}
+	</script>
+
+	<div class="flex">
+		<img id="map" src="images/body.png" href="#" onmouseover="displayImg()" onmouseout="vanishImg()" onmousemove="displayImg()" >
+	</div>
+
+	<!--動態顯示的圖片-->
+	<div id="image">
+		<img class="pop" src="images/temp_map_info.png" alt="">
+	</div>
+
+	</div>
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -42,7 +86,7 @@
 									<th class="cell100 column1">Parameter (Unit)</th>
 									<th class="cell100 column2">Value</th>
 									<th class="cell100 column3">Normal Range</th>
-									<th class="cell100 column4">Description</th>
+									<th class="cell100 column4">Discription</th>
 									<th class="cell100 column5">Note</th>
 								</tr>
 							</thead>
@@ -198,7 +242,7 @@
 								</tr>
 							</tbody>
 						</table>
-						<center><a href="#top">BACK TO TOP</a></center>
+						<a href="#top"><center><input class="bt02" type="button" value="BACK TO TOP"></center></a>
 					</div>
 				</div>
 
