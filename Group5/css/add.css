@@ -14,3 +14,16 @@ input:hover{
 
 }
 
+.flex{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+div.spacer{
+  margin: 0px 20px 0px 20px;
+}
