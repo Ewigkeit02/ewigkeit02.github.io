@@ -27,3 +27,13 @@ html {
 div.spacer{
   margin: 0px 20px 0px 20px;
 }
+
+input.bt02{
+  border:0;
+  background-color:#fff;
+  color:#000;
+  border-radius:10px;
+  cursor:pointer;
+  padding: 0px;
+  box-sizing : content-box;
+}
