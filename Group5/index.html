@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<title>Result</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src='js/scroll.js' type='text/javascript'></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -24,9 +26,14 @@
 </head>
 <body>
 	
+	</br>
+	
+	<div style="text-align:center;"><h1><font color="blue">RESULT</font></h1></div>
+	<div class="body-map"></div>
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
+				
 				<div class="table100 ver4 m-b-110">
 					<div class="table100-head">
 						<table>
@@ -45,7 +52,7 @@
 					<div class="table100-body js-pscroll">
 						<table>
 							<tbody>
-								<tr class="row100 body">
+								<tr class="row100 body" id="top">
 									<td class="cell100 column1">Blood Pressure (mmHg)</td>
 									<td class="cell100 column2"><font color="red">Systolic: 150</font></br>Diastolic: 89</td>
 									<td class="cell100 column3">Systolic: 140~90</br>Diastolic: 90~60</td>
@@ -191,17 +198,18 @@
 								</tr>
 							</tbody>
 						</table>
+						<center><a href="#top">BACK TO TOP</a></center>
 					</div>
 				</div>
+
 			</div>
+			
 		</div>
-		<center><a href="2.html"><input type="button" name="solutions" style="width:200px;height:40px;"value="Give me solutions!"></a></center>
+		<center><a href="2.html"><input type="button" name="solutions" style="width:200px;height:40px;font-size: 100"value="Give me solutions!"></a></center>
 	</br></br></br></br></br></br>
 	</div>
+	
 
-
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
