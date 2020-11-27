@@ -38,7 +38,7 @@
 		img.pop{
 			width:200px;
 		}
-		#image{
+		#img-temp{
 			border-color: black;
 			border: solid;
 			border-width: 1px;
@@ -48,8 +48,8 @@
 	</style>
 
 	<script>
-		function displayImg() {
-			var img = document.getElementById("image");
+		function displayImg(img_id){
+			var img = document.getElementById(img_id);
 
 			var x = event.clientX + document.body.scrollLeft + 20;
 			var y = event.clientY + document.body.scrollTop - 5; 
@@ -58,19 +58,19 @@
 			img.style.top = y + "px";
 			img.style.display = "block";
 		}
-		function vanishImg(){
-			var img = document.getElementById("image");
+		function vanishImg(img_id){
+			var img = document.getElementById(img_id);
 			img.style.display = "none";
 		}
 	</script>
 
 	<div class="flex">
-		<img id="map" src="images/body.png" href="#" onmouseover="displayImg()" onmouseout="vanishImg()" onmousemove="displayImg()" >
+		<img id="map" src="images/body.png" href="#" onmouseover="displayImg('img-temp')" onmouseout="vanishImg('img-temp')" onmousemove="displayImg('img-temp')" >
 	</div>
 
 	<!--動態顯示的圖片-->
-	<div id="image">
-		<img class="pop" src="images/temp_map_info.png" alt="">
+	<div id="img-temp">
+		<img src="images/temp_map_info.png" alt="">
 	</div>
 
 	</div>
@@ -242,7 +242,7 @@
 								</tr>
 							</tbody>
 						</table>
-						<a href="#top"><center><input style="width:150px; height:30px;" type="button" value="TOP"></center></a>
+						<a href="#top"><center><input class="bt02" type="button" value="BACK TO TOP"></center></a>
 					</div>
 				</div>
 
